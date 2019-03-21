@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:latest
+    steps:
+      - checkout
+      - run: echo "Hello, world!"
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
